@@ -1,1 +1,16 @@
- 
+version: '3'
+services:
+  spotify:
+    image: spotifyd:latest
+    container_name: Spotify
+    stdin_open: true
+    tty: true
+    networks:
+      bridge
+    environment:
+      TZ: 'Europe/Rome'
+    volumes:
+      - '/home/dietpi/spotify-conf:/root/.config'
+    devices:
+      - '/dev/snd:/dev/snd'
+    restart: unless-stopped
