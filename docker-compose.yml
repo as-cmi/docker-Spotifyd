@@ -7,8 +7,6 @@ services:
     container_name: Spotify
     stdin_open: true
     tty: true
-    networks:
-      bridge
     environment:
       TZ: 'Europe/Rome'
     volumes:
