@@ -2,6 +2,8 @@ version: '3'
 services:
   spotify:
     image: spotifyd:latest
+    build:
+      dockerfile: Dockerfile
     container_name: Spotify
     stdin_open: true
     tty: true
